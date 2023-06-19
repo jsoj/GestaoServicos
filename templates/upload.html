@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load bootstrap5 %}
+{% block content %}
+
+<!-- filtro  -->
+
+    <div class="bg-light" style="margin-top:60px">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+
+<!-- tabela -->
+
+    <div class="content-fluid margin-top:60px">
+        <table class="table table-striped" >
+            <thead>
+                <tr>
+                    <th> Descricao </th> <th> Documento </th> <th> Data Upload</th> <th> link </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in list %}
+                    <tr> <td> {{ x.description }} </td> <td>  ${{ x.document }}</td> <td>x.uploaded_at </td> <td> <a href="url">link</a> </td> </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <body>
+        {{df|safe}}
+    </body>
+
+{% endblock %}
