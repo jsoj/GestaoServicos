@@ -1,0 +1,52 @@
+{% extends "menu.html" %}
+
+{% block content %}
+
+<div class="row" data-width="100%" >
+
+    {# FILTRO LATERAL #}
+
+{#    <div class="mh-auto bg-primary text-white p-2 " style="width:250px">#}
+{#        <form method="get">#}
+{#            {{ filter.form.as_p }}#}
+{#            <input type="submit" class="btn btn-secondary"/>#}
+{#        </form>#}
+{#    </div>#}
+
+    {# TABELA #}
+
+    <div class="col-sm-12 p-3">
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th> Nome </th>
+                    <th> preço </th>
+                    <th> status</th>
+                    <th> link </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for obj in filter.qs %}
+                    <tr> <td> {{ obj.name }} </td>
+                         <td> {{ obj.price }}</td>
+                         <td>status </td>
+                        <td> <a href="#">link</a> </td> </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+
+{################################################################}
+
+{% block scripts %}
+    <script>
+        $(document).ready(function(){
+            $("#myTable").DataTable();
+        })
+    </script>
+{% endblock scripts %}
+
+{################################################################}

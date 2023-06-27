@@ -6,87 +6,41 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}ß
     {% bootstrap_messages %}
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/yadcf/0.9.4-beta.45/jquery.dataTables.yadcf.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.1/datatables.min.css">
+    <script src="https://cdn.datatables.net/v/bs4/dt-1.11.1/datatables.min.js"></script>
 </head>
 
 <body class="border border-5 border-warning">
-    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top border border-5 border-warning border border-bottom-0">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">Logo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mynavbar">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cadastros</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/index">Empresas</a></li>
-                <li><a class="dropdown-item" href="/list">Usuários</a></li>
-                <li><a class="dropdown-item" href="#">Leads</a></li>
-                <li><a class="dropdown-item" href="#">Clientes</a></li>
-                <li><a class="dropdown-item" href="#">Status</a></li>
-                <li><a class="dropdown-item" href="#">Origens</a></li>
-                <li><a class="dropdown-item" href="#">Temperatura</a></li>
-                <li><a class="dropdown-item" href="#">Atividades</a></li>
-              </ul>
-            </li>
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Parametrizações</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link</a></li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li><a class="dropdown-item" href="#">A third link</a></li>
-              </ul>
-            </li>
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Processos</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/upload">Upload</a></li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li><a class="dropdown-item" href="#">A third link</a></li>
-              </ul>
-            </li>
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atividades</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link</a></li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li><a class="dropdown-item" href="#">A third link</a></li>
-              </ul>
-            </li>
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link</a></li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li><a class="dropdown-item" href="#">A third link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search">
-            <button class="btn btn-primary" type="button">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-
+    {% block Menu %}
+    {% endblock %}
     <div class="container-fluid" style="margin-top:55px; margin-bottom:55px">
         {% block content %}
-
         {% endblock %}
     </div>
-
     <nav class="navbar navbar-expand-sm bg-primary text-white fixed-bottom border border-5 border-warning border border-top-0">
         <div class="container-fluid">
-            <p>Direitos Reservados</p>
+            {% block Rodape %}
+            {% endblock %}
         </div>
     </nav>
-
 </body>
 
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/yadcf/0.9.4-beta.45/jquery.dataTables.yadcf.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
 </html>
+
+{################################################################}
+{% block scripts %}
+{% endblock scripts %}
+{################################################################}

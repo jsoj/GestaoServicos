@@ -1,5 +1,5 @@
-{% extends "base.html" %}
-{% load bootstrap5 %}
+{% extends "menu.html" %}
+
 {% block content %}
 
 <!-- filtro  -->
@@ -15,7 +15,7 @@
 <!-- tabela -->
 
     <div class="content-fluid margin-top:60px">
-        <table class="table table-striped" >
+        <table class="table table-striped" id="tabela1">
             <thead>
                 <tr>
                     <th> Descricao </th> <th> Documento </th> <th> Data Upload</th> <th> link </th>
@@ -34,3 +34,15 @@
     </body>
 
 {% endblock %}
+
+{#############################################################################}
+
+{% block scripts %}
+    <script>
+        $(document).ready(function(){
+            $("#myTable").DataTable();
+        })
+    </script>
+{% endblock scripts %}
+
+{#############################################################################}

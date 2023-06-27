@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{################################################################}
+
+{% block Menu %}
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top border border-5 border-warning border-bottom-0">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cadastros</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/empresa">Empresas</a></li>
+            <li><a class="dropdown-item" href="/pessoa">Pessoas</a></li>
+            <li><a class="dropdown-item" href="/origem">Origem</a></li>
+            <li><a class="dropdown-item" href="/temperatura">Temperatura</a></li>
+            <li><a class="dropdown-item" href="/acao">Ação</a></li>
+            <li><a class="dropdown-item" href="/tagpessoa">Tag Pessoas</a></li>
+            <li><a class="dropdown-item" href="/status">Status</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Processos</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/upload">Upload</a></li>
+            <li><a class="dropdown-item" href="#">Ação</a></li>
+            <li><a class="dropdown-item" href="#">Venda</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ajustes</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Cores</a></li>
+            <li><a class="dropdown-item" href="#">Acessos</a></li>
+            <li><a class="dropdown-item" href="#">Conexões</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Atividades</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">link</a></li>
+            <li><a class="dropdown-item" href="#">link</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboard</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">link</a></li>
+            <li><a class="dropdown-item" href="#">link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Buscar">
+        <button class="btn btn-primary" type="button">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+{% endblock %}
+
+{################################################################}

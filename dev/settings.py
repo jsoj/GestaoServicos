@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crm.apps.CrmConfig',
     'bootstrap5',
+    'bs4',
 ]
 
 MIDDLEWARE = [
